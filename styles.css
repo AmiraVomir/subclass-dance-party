@@ -25,3 +25,46 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes changeShape {
+  0%  {
+    border-radius: 0 0 0 0;
+  }
+  25%  {
+    border-radius: 50% 0 0 0;
+  }
+  50%  {
+    border-radius: 50% 50% 0 0;
+  }
+  75%  {
+    border-radius: 50% 50% 50% 0;
+  }
+  100%  {
+    border-radius: 50%;
+  }
+}
+.spin {
+  animation: spin 1.2s linear infinite;
+  width: 0;
+  height: 0;
+  border: 55px solid yellow;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 55px solid yellow;
+  border-radius: 0;
+}
+
+.square{
+  border: 45px solid green;
+  border-radius: 0;
+  position: absolute;
+  animation: changeShape 1.5s infinite;
+}
