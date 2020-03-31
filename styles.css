@@ -93,15 +93,6 @@ body, a:link, a:visited, a:active{
   transform: translateX(300px);
   transition: all 1s ease-in;
 }
-.slide2 {
-  border: 35px solid red;
-  border-radius: 35px;
-  position: absolute;
-}
-.slide2:hover {
-  transform: translate(0,300px);
-  transition: all 1s ease-in;
-}
 .jumpy {
   border: 50px solid yellow;
   border-radius: 50px;
