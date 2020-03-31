@@ -33,6 +33,23 @@ body, a:link, a:visited, a:active{
     transform: rotateZ(360deg);
   }
 }
+@keyframes jump {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-100px, 100px);
+  }
+  50% {
+    transform: translate(0px, 200px);
+  }
+  75% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(0 px, 0 px);
+  }
+}
 @keyframes changeShape {
   0%  {
     border-radius: 0 0 0 0;
@@ -75,4 +92,24 @@ body, a:link, a:visited, a:active{
 .slide:hover {
   transform: translateX(300px);
   transition: all 1s ease-in;
+}
+.slide2 {
+  border: 35px solid red;
+  border-radius: 35px;
+  position: absolute;
+}
+.slide2:hover {
+  transform: translate(0,300px);
+  transition: all 1s ease-in;
+}
+.jumpy {
+  border: 50px solid yellow;
+  border-radius: 50px;
+  position: absolute;
+  animation: jump 1.2s linear infinite;
+}
+.moving {
+  border: 30px solid green;
+  border-radius: 30px;
+  position: absolute;
 }
