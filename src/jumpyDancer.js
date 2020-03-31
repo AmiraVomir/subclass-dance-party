@@ -10,3 +10,8 @@ JumpyDancer.prototype.constructor = JumpyDancer;
 JumpyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
 };
+
+JumpyDancer.prototype.lineUp = function(value) {
+  this.$node.stop();
+  this.setPosition(value, 25);
+};
