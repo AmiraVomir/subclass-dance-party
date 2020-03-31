@@ -1,6 +1,7 @@
 var SlideDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('slide');
+  this.timeBetweenSteps = 3000;
 };
 
 SlideDancer.prototype = Object.create(Dancer.prototype);
@@ -14,4 +15,9 @@ SlideDancer.prototype.step = function() {
     left: '+=' + number1,
     top: '+=' + number2,
   }, 2000);
+};
+
+Dancer.prototype.lineUp = function(value) {
+  this.$node.stop();
+  this.setPosition(value, 25);
 };
