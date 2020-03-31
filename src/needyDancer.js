@@ -1,6 +1,8 @@
 var NeedyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('needy');
+  this.top = 50%;
+  this.left = 50%;
 };
 
 NeedyDancer.prototype = Object.create(Dancer.prototype);
@@ -13,13 +15,15 @@ NeedyDancer.prototype.step = function() {
 
 NeedyDancer.prototype.attach = function() {
   let n = window.dancers.length;
-  let leftAvg = 0;
-  let topAvg = 0;
-  for (const dancer of window.dancers) {
-    leftAvg += dancer.left;
-    topAvg += dancer.top;
+  console.log(n)
+  let leftTotal = 0;
+  let topTotal = 0;
+  for (var i = 0; i < window.dancers.length; i++) {
+    let currentDancer = window.dancers[i];
+    leftTotal += currentDancer.left;
+    topTotal += currentDancer.top
   }
-  this.left = leftAvg / n;
-  this.top = topAvg / n;
-  this.setPosition(this.left, this.top);
+  this.left = leftTotal / n;
+  this.top = topTotal /  n;
+  this.setPosition(this.top, this.left);
 };
