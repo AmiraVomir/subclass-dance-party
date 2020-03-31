@@ -72,3 +72,7 @@ body, a:link, a:visited, a:active{
   border-radius: 35px;
   position: absolute;
 }
+.slide:hover {
+  transform: translateX(300px);
+  transition: all 1s ease-in;
+}
