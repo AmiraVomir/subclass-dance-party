@@ -31,5 +31,13 @@ Dancer.prototype.setPosition = function(top, left) {
 };
 
 Dancer.prototype.lineUp = function(value) {
-  this.setPosition(value, 25);
+  this.setPosition(value, 50);
+};
+
+Dancer.prototype.changeColor = function() {
+  var red = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
+  var rgba = 'rgba(' + red + ',' + green + ',' + blue + ',1)';
+  this.$node.css({'border-color': rgba});
 };
