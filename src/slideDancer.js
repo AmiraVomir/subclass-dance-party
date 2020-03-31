@@ -1,17 +1,11 @@
-var SpinDancer = function(top, left, timeBetweenSteps) {
+var SlideDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.colorWheel = ['yellow', 'green', 'blue'];
-  this.$node.addClass('spin');
+  this.$node.addClass('slide');
 };
 
-SpinDancer.prototype = Object.create(Dancer.prototype);
-SpinDancer.prototype.constructor = SpinDancer;
+SlideDancer.prototype = Object.create(Dancer.prototype);
+SlideDancer.prototype.constructor = SlideDancer;
 
-SpinDancer.prototype.step = function() {
-  // let self = this;
+SlideDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  let color1 = Math.floor(Math.random() * 256);
-  let color2 = Math.floor(Math.random() * 256);
-  let color3 = Math.floor(Math.random() * 256);
-  this.$node.css('background-color', 'rgb("+ color1 + ","+ color2 +", "+ color3 +")');
 };
