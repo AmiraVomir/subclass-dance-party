@@ -25,7 +25,6 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-
 @keyframes spin {
   0% {
     transform: rotateZ(0);
@@ -61,10 +60,15 @@ body, a:link, a:visited, a:active{
   border-bottom: 55px solid yellow;
   border-radius: 0;
 }
-
 .square{
-  border: 45px solid green;
+  border: 45px groove green;
   border-radius: 0;
   position: absolute;
-  animation: changeShape 1.5s infinite;
+  animation: changeShape 1.5s infinite,
+  spin 4s infinite;
+}
+.slide {
+  border: 35px solid blue;
+  border-radius: 35px;
+  position: absolute;
 }
