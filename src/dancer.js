@@ -31,6 +31,7 @@ Dancer.prototype.setPosition = function(top, left) {
 };
 
 Dancer.prototype.lineUp = function(value) {
+  this.$node.stop();
   this.setPosition(value, 50);
 };
 
