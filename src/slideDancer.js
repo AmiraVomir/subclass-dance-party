@@ -21,8 +21,3 @@ SlideDancer.prototype.step = function() {
   //     .css('transition', 'all 1s ease-in');
   // }); //works using mouseover
 };
-
-SlideDancer.prototype.lineUp = function(value) {
-  this.$node.stop();
-  this.setPosition(value, 25);
-};
