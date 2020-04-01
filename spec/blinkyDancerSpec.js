@@ -30,5 +30,18 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
+
+    it('should have a color change function', function() {
+      sinon.spy(blinkyDancer, 'changeColor');
+      expect(blinkyDancer.changeColor.callCount).to.be.equal(0);
+      clock.tick(timeBetweenSteps);
+      expect(blinkyDancer.changeColor.callCount).to.be.equal(1);
+    });
+
+    it('should not change original position when lineup is called', function() {
+      sinon.spy(blinkyDancer, 'lineUp');
+      blinkyDancer.lineUp(10);
+      expect(blinkyDancer.left).to.equal(20);
+    });
   });
 });
