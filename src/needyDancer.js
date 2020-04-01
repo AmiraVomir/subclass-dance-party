@@ -1,8 +1,6 @@
 var NeedyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('needy');
-  this.top = 500;
-  this.left = 500;
 };
 
 NeedyDancer.prototype = Object.create(Dancer.prototype);
